@@ -1,0 +1,6 @@
+#to get hypotenuse 
+import math
+length=float(input("Enter the length of the triangle"))
+breadth=float(input("Enter the breadth of the triangle"))
+hypotenuse=math.sqrt(math.pow(length,2)+math.pow(breadth,2))
+print(f"the hypotenuse is {hypotenuse}")
