@@ -1,1 +1,15 @@
+#basic calculator using if else
+choice=input("Enter the operator to be perform \n For add + \n For subtract - \n For multiplication * \n For division / \n :")
+num1=float(input("Enter the number 1:"))
+num2=float(input("Enter the number 2:"))
+if choice=='+':
+    print("Addition of the number is",num1+num2)
+elif choice=='-':
+    print("Subtraction of the number is",num1-num2)
+elif choice=='*':
+    print("Multiplication of the number is",num1*num2)
+elif choice=="/":
+    print("Division of the number is",num1/num2)
+else:
+    print(f"{choice} is an INVALID operator")
 
