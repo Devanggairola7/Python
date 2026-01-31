@@ -1,0 +1,9 @@
+#to calculate circle area and circumference
+import math
+radius=float(input("Enter the radius"))
+area= math.pi*pow(radius, 2)
+area=round(area,2)
+print(f"the area of the circle is {area}")
+circumference= 2*math.pi*radius
+circumference=round(circumference,2)
+print(f"the circumference of the circle is {circumference}")
