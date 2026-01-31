@@ -1,0 +1,11 @@
+#weight conversion 
+weight=float(input("Enter your weight: "))
+unit=input("Is the weight in kg(K) or Lbs(L): ")
+if unit=='K':
+    weight=weight*2.205
+    print(f"The weight in pounds will be {weight}lbs")
+elif unit=='L':
+    weight=weight/2.205
+    print(f"The weight in kilogram will be {weight}kgs")
+else:
+    print("Invalid")
