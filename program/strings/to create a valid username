@@ -1,0 +1,20 @@
+#to create and take a valid user input as a name with condition like 
+#1. username should not be more than 12 characters
+#2.username should not contain spaces
+#3. username should not contain numeric 
+username=input("Enter your name: ")
+spc=username.count(" ")
+chk_alpha= username.isalpha()
+digit=len(username)
+if digit>12:
+    print("Invalid try again!")
+else:
+    print("Valid count ")
+    if spc==0:
+        print("No spaces")
+        if chk_alpha:
+            print("All alphabet")
+        else:
+            print("Numeric value is their. \n Try again!")
+    else:
+        print("Spaces present \n Try again! ")
