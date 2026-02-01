@@ -1,0 +1,4 @@
+#to check even or odd and positive and negative
+num=int(input("Enter a number: "))
+print("Even" if num%2 ==0 else "Odd")
+print("Positive" if num>0 else "Negative")
