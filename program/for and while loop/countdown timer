@@ -1,0 +1,11 @@
+#countdown timer 
+import time
+user_time=int(input("Enter the time in minutes"))
+user_time*=60
+for X in range(user_time,0,-1):
+    second=X%60
+    minute=int(X/60)%60
+    hour=int(X/3600)
+    print(f"{hour:02}:{minute:02}:{second:02}")
+    time.sleep(1)
+print("Time up!")
