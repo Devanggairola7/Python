@@ -1,0 +1,46 @@
+#Compound interest calculator for annual,monthly basis
+import math
+principal=int(input("Enter the amount to be borrowed: "))
+while principal<=0:
+    if(principal<=0):
+        print("Amount cannot be less than or equal to zero !")
+        principal=int(input("Enter the amount to be borrowed !"))
+    else:
+        print("Valid amount entered ..")
+rate=float(input("Enter the interest rate: "))
+while rate<=0:
+    print("Rate cannot be less than or equal to zero! ")
+    rate=float(input("Enter the interest rate: "))
+    if rate<=0:
+        print("Rate cannot be less than or equal to zero! ")
+        rate=float(input("Enter the interest rate: "))
+    else:
+        print("Valid interest rate entered..")
+Choice=input("Enter the interest taken in  year(Y) ,monthly(M) : ")
+
+if Choice =='Y':
+    print("Year basis ")
+    N=1
+elif Choice =='M':
+    print("Monthly basis")
+    N=12
+else:
+    while not Choice=='Y' or Choice=='M':
+        print("Invalid entered")
+        Choice=input("Enter the interest taken in  year(Y) ,monthly(M) : ")
+         
+time=int(input("Enter the time for the money borrowed: "))
+while time<=0:
+    print("Time cannot be zero or in negative ! ")
+    time=int(input("Enter the time for the money borrowed: "))
+    if time<=0:
+        print("Time cannot be zero or in negative ! ")
+        time=int(input("Enter the time for the money borrowed: "))
+    else:
+        print("Entered a valid time..")
+rate=rate/100
+X=1+rate/N
+amount=pow(X,time)
+amount*=principal
+print(f"The final amount is {amount}")
+print("the money as interest is ",amount-principal)
