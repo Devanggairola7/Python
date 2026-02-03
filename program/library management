@@ -1,0 +1,37 @@
+#library system admin name,password,
+Book=["ABC","CDE","EDF","CED"]
+Z=len(Book)
+password1="A"
+user_name=input("Enter the name of the user: ")
+if user_name.isalpha():
+    print("True")
+    A_S=input("Admin(A) or student(S): ")
+    if A_S=='A':
+        password=input("Enter the password: ")
+        if password==password1:
+            print("admin access given")
+            print("To print book names in the library type (Booknames)\n To print total number of books type(Count)")
+            command=input(":")
+            if command=="Booknames":
+                for x in range(Z):
+                    print(Book[x])
+                
+            elif command=="Count":
+                print(len(Book))
+            elif command=="Add":
+                New=input("Enter the name of the book to be add: ")
+                print
+            else:
+                print("Invalid")
+        else:
+            print("wrong password!")
+        
+    elif A_S=='S':
+        print(f"Student access given to {user_name}")
+        FIND=input("Enter the name of the  book: ")
+        for x in range(Z):
+            
+    else:
+        print("Invalid choice b/w Admin and Student")
+else:
+    print("Invalid")
