@@ -1,0 +1,7 @@
+#decreasing star right angle triangle
+for x in range(6):
+    for y in range(6-x):
+        print(" ",end="")
+    for y in range(x):
+        print("*",end="")
+    print()
