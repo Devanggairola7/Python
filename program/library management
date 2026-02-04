@@ -1,4 +1,4 @@
-#library system admin name,password,
+#Library management system
 Book=["ABC","CDE","EDF","CED"]
 Z=len(Book)
 password1="A"
@@ -10,19 +10,27 @@ if user_name.isalpha():
         password=input("Enter the password: ")
         if password==password1:
             print("admin access given")
-            print("To print book names in the library type (Booknames)\n To print total number of books type(Count)")
+            print("To print book names in the library type (Booknames)\nTo print total number of books type(Count)\nTo add a new book in library type (Add)\nTo remove a book from library type(Remove)\nTo quit type(Q)")
             command=input(":")
-            if command=="Booknames":
-                for x in range(Z):
-                    print(Book[x])
+            while (command !='Q'):
+                if command=="Booknames":
+                    for x in range(Z):
+                        print(Book[x])
                 
-            elif command=="Count":
-                print(len(Book))
-            elif command=="Add":
-                New=input("Enter the name of the book to be add: ")
-                print
-            else:
-                print("Invalid")
+                elif command=="Count":
+                    print(len(BooK))
+                elif command=="Add":
+                    New=input("Enter the name of the book to be add: ")
+                    Book.append(f"{New}")
+                    Z=len(Book)
+                    for x in range(Z):
+                        print(Book[x])
+                elif command=="Remove":
+                    Rem=input("Enter the name of the book: ")
+                    Book.remove(f"{Rem}")
+                    print("Book removed from library!")
+                else:
+                    print("Invalid")
         else:
             print("wrong password!")
         
@@ -30,8 +38,12 @@ if user_name.isalpha():
         print(f"Student access given to {user_name}")
         FIND=input("Enter the name of the  book: ")
         for x in range(Z):
-            
+            if FIND==Book[x]:
+                print("Present in the library")
+                break
+            else:
+                print("Not Present in the library")
     else:
         print("Invalid choice b/w Admin and Student")
 else:
-    print("Invalid")
+    print("Invalid wrong name ")
