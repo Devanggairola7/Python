@@ -1,0 +1,9 @@
+class can:
+    def __init__(self,brand,mfg,exp):
+        self.brand= brand
+        self.mfg=mfg
+        self.exp=exp
+can1=can("Pepsi","jan2026","apr2027")
+can2=can("Monster","dec2025","apr2026")
+print(f"{can1.brand}")
+print(f"{can2.mfg}")
